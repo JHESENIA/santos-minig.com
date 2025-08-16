@@ -1,0 +1,1237 @@
+/* ====== ESTILOS PREMIUM INDUSTRIALES ====== */
+:root {
+  /* Paleta de colores industrial-minera */
+  --black-steel: #121212;
+  --gold-vein: #FFD700;
+  --copper: #B87333;
+  --rust: #8B3103;
+  --concrete: #F5F5F5;
+  
+  /* Efectos especiales */
+  --metal-glow: 0 0 15px rgba(255, 215, 0, 0.6);
+  --heavy-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --text-emboss: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+/* ====== ESTILOS BASE CON TEXTURA INDUSTRIAL ====== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--concrete);
+  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ====== NAVEGACIÓN TIPO MAQUINARIA PESADA ====== */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black-steel);
+  padding: 1.2rem;
+  z-index: 1000;
+  box-shadow: var(--heavy-shadow);
+  border-bottom: 3px solid var(--gold-vein);
+}
+
+nav a {
+  color: var(--gold-vein);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: all 0.4s ease;
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: white;
+  background: var(--rust);
+  transform: translateY(-3px);
+  text-shadow: var(--text-emboss);
+  box-shadow: 0 5px 15px rgba(184, 115, 51, 0.4);
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: var(--gold-vein);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+/* ====== HERO SECTION TIPO MINA SUBTERRÁNEA ====== */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--black-steel);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(to right, var(--gold-vein), var(--copper));
+  border-radius: 3px;
+}
+
+.hero-section {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Handcars%2C_Kongensgruve_%28112-1269_IMG%29.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3rem 0;
+  box-shadow: var(--heavy-shadow);
+  border: 2px solid var(--gold-vein);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 65%,
+    rgba(255, 215, 0, 0.1) 100%
+  );
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  position: relative;
+}
+
+/* ====== FEATURES TIPO PLACAS METÁLICAS ====== */
+.features-section {
+  margin: 5rem 0;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  color: var(--black-steel);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.features-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gold-vein);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-item {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  border-left: 5px solid var(--gold-vein);
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+
+.feature-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  color: var(--black-steel);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.feature-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--copper);
+}
+
+.feature-item p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ====== REDES SOCIALES TIPO TORNILLOS ====== */
+.redes-flotantes {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 999;
+}
+
+.redes-flotantes a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.redes-flotantes a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.redes-flotantes a:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: var(--metal-glow);
+}
+
+.redes-flotantes a:hover::before {
+  left: 100%;
+}
+
+.redes-flotantes .facebook { background: #1877f2; }
+.redes-flotantes .instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+.redes-flotantes .whatsApp { background: #25d366; }
+
+/* ====== FOOTER TIPO PLACA DE ACERO ====== */
+.footer {
+  background: var(--black-steel);
+  color: white;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+  text-align: center;
+  position: relative;
+  border-top: 3px solid var(--gold-vein);
+  background-image: url('https://www.transparenttextures.com/patterns/dark-metal.png');
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--gold-vein),
+    var(--copper),
+    var(--gold-vein)
+  );
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  color: var(--gold-vein);
+  font-weight: 500;
+}
+
+/* ====== EFECTOS ESPECIALES ====== */
+/* Efecto de maquinaria en movimiento */
+@keyframes machineMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.feature-item:hover {
+  animation: machineMove 1.5s infinite;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  nav a {
+    padding: 0.6rem 1rem;
+    margin: 0.3rem;
+    font-size: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .redes-flotantes {
+    flex-direction: row;
+    top: auto;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .redes-flotantes a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+/* ====== ESTILOS PARA SECCIÓN DE SERVICIOS ====== */
+.seccion-servicios {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-servicios::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/dark-geometric.png');
+  opacity: 0.03;
+  z-index: -1;
+}
+
+.seccion-servicios h1 {
+  font-size: 3rem;
+  color: var(--black-steel);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.seccion-servicios h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(to right, var(--gold-vein), var(--copper));
+  border-radius: 2px;
+}
+
+.seccion-servicios .intro {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.seccion-servicios .intro strong {
+  color: var(--rust);
+  font-weight: 700;
+}
+
+/* ====== GRID DE SERVICIOS ESTILO TABLERO DE CONTROL ====== */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.servicio {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--gold-vein);
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+  z-index: 1;
+}
+
+.servicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,215,0,0.05) 0%, rgba(184,115,51,0.05) 100%);
+  z-index: -1;
+}
+
+.servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 0 15px rgba(255,215,0,0.3);
+}
+
+.servicio h2 {
+  font-size: 1.5rem;
+  color: var(--black-steel);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.servicio h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--gold-vein);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Iconos personalizados para cada servicio */
+.servicio:nth-child(1) h2::before { content: "⛏️"; background: var(--rust); }
+.servicio:nth-child(2) h2::before { content: "📊"; background: #4a6fa5; }
+.servicio:nth-child(3) h2::before { content: "⚒️"; background: #555; }
+.servicio:nth-child(4) h2::before { content: "🌱"; background: #4a8f29; }
+
+.servicio p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* ====== EFECTO MAQUINARIA EN OPERACIÓN ====== */
+@keyframes maquinariaOperacion {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.servicio:hover {
+  animation: maquinariaOperacion 1.5s infinite;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .seccion-servicios {
+    padding: 1.5rem;
+  }
+  
+  .seccion-servicios h1 {
+    font-size: 2.2rem;
+  }
+  
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .servicio {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicio h2 {
+    font-size: 1.3rem;
+    padding-left: 2.2rem;
+  }
+  
+  .servicio h2::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+/* ====== ESTILOS PARA SECCIÓN NOSOTROS ====== */
+.container-nosotros {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.container-nosotros::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/diagonal-striped-brick.png');
+  opacity: 0.03;
+  z-index: -1;
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  color: var(--black-steel);
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.titulo-principal::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(to right, var(--gold-vein), var(--copper));
+  border-radius: 2px;
+}
+
+/* ====== BLOQUES DE INFORMACIÓN ESTILO PLACAS METÁLICAS ====== */
+.bloque-info {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid var(--gold-vein);
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+
+.bloque-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 0 15px rgba(255,215,0,0.3);
+}
+
+.bloque-info h2 {
+  font-size: 1.8rem;
+  color: var(--black-steel);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.bloque-info h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 30px;
+  background: var(--gold-vein);
+  border-radius: 2px;
+}
+
+.bloque-info p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ====== LISTA DE VALORES ESTILO LISTA DE MATERIALES ====== */
+.bloque-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+.bloque-info li {
+  padding: 0.8rem 0 0.8rem 2.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  border-bottom: 1px dashed #eee;
+}
+
+.bloque-info li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--gold-vein);
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.bloque-info li strong {
+  color: var(--rust);
+  font-weight: 700;
+}
+
+/* ====== EFECTO DE MAQUINARIA PESADA ====== */
+@keyframes maquinariaPesada {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+.bloque-info:hover {
+  animation: maquinariaPesada 0.8s ease;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .container-nosotros {
+    padding: 1.5rem;
+  }
+  
+  .titulo-principal {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .bloque-info {
+    padding: 2rem;
+  }
+  
+  .bloque-info h2 {
+    font-size: 1.5rem;
+    padding-left: 1.8rem;
+  }
+  
+  .bloque-info li {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bloque-info {
+    padding: 1.5rem;
+  }
+  
+  .bloque-info h2 {
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+  }
+  
+  .bloque-info h2::before {
+    height: 25px;
+    width: 8px;
+  }
+  
+  .bloque-info li {
+    padding-left: 1.8rem;
+  }
+}
+/* ====== ESTILOS PARA SECCIÓN DE CONTACTO ====== */
+.seccion-contacto {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  background: url('https://www.transparenttextures.com/patterns/dark-denim-3.png');
+}
+
+.seccion-contacto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,215,0,0.03) 0%, rgba(184,115,51,0.03) 100%);
+  z-index: -1;
+}
+
+.seccion-contacto h1 {
+  font-size: 2.8rem;
+  color: var(--black-steel);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.seccion-contacto h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(to right, var(--gold-vein), var(--copper));
+  border-radius: 2px;
+}
+
+.seccion-contacto .intro {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.seccion-contacto .intro strong {
+  color: var(--rust);
+  font-weight: 700;
+}
+
+/* ====== FORMULARIO ESTILO TABLERO DE CONTROL ====== */
+.formulario-contacto {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  border: 2px solid var(--gold-vein);
+  max-width: 800px;
+  margin: 0 auto;
+  background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
+  opacity: 0.95;
+}
+
+.formulario-contacto h2 {
+  font-size: 1.8rem;
+  color: var(--black-steel);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.formulario-contacto h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--gold-vein);
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--black-steel);
+  font-size: 1rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.9);
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: var(--gold-vein);
+  box-shadow: 0 0 0 3px rgba(255,215,0,0.2);
+}
+
+.formulario-contacto textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* ====== CHECKBOX ESTILO INTERRUPTOR MINERO ====== */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gold-vein);
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background: var(--gold-vein);
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ====== BOTÓN ESTILO DETONADOR ====== */
+.formulario-contacto button {
+  background: var(--black-steel);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--gold-vein);
+  position: relative;
+  overflow: hidden;
+}
+
+.formulario-contacto button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent);
+  transition: 0.5s;
+}
+
+.formulario-contacto button:hover {
+  background: var(--gold-vein);
+  color: var(--black-steel);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(184, 115, 51, 0.4);
+}
+
+.formulario-contacto button:hover::before {
+  left: 100%;
+}
+
+/* ====== EFECTO DE MAQUINARIA ====== */
+@keyframes maquinariaContacto {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.formulario-contacto:hover {
+  animation: maquinariaContacto 1s ease;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .seccion-contacto {
+    padding: 1.5rem;
+  }
+  
+  .seccion-contacto h1 {
+    font-size: 2.2rem;
+  }
+  
+  .formulario-contacto {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-contacto h1 {
+    font-size: 1.8rem;
+  }
+  
+  .formulario-contacto h2 {
+    font-size: 1.4rem;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 0.8rem;
+  }
+}
+
+/* ====== ESTILOS PARA SECCIÓN DE COMENTARIOS ====== */
+.seccion-comentarios {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png');
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-comentarios::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,215,0,0.03) 0%, rgba(184,115,51,0.03) 100%);
+  z-index: -1;
+}
+
+.seccion-comentarios h1 {
+  font-size: 2.8rem;
+  color: var(--black-steel);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.seccion-comentarios h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(to right, var(--gold-vein), var(--copper));
+  border-radius: 2px;
+}
+
+.comentarios-intro {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.comentarios-intro strong {
+  color: var(--rust);
+  font-weight: 700;
+}
+
+/* ====== LAYOUT DE COMENTARIOS ====== */
+.comentarios-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* ====== FORMULARIO ESTILO PLANO DE MINA ====== */
+#form-comentario {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  border: 2px solid var(--gold-vein);
+  background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
+  opacity: 0.95;
+}
+
+#form-comentario input,
+#form-comentario textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.8);
+}
+
+#form-comentario input:focus,
+#form-comentario textarea:focus {
+  outline: none;
+  border-color: var(--gold-vein);
+  box-shadow: 0 0 0 3px rgba(255,215,0,0.2);
+}
+
+#form-comentario textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#form-comentario button {
+  background: var(--black-steel);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--gold-vein);
+}
+
+#form-comentario button:hover {
+  background: var(--gold-vein);
+  color: var(--black-steel);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(184, 115, 51, 0.4);
+}
+
+/* ====== LISTA DE COMENTARIOS ESTILO TABLERO ====== */
+.comentarios-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.comentario {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid var(--gold-vein);
+  transition: all 0.3s ease;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+
+.comentario::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,215,0,0.05) 0%, rgba(184,115,51,0.05) 100%);
+}
+
+.comentario:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.comentario .texto {
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.comentario .texto::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2.5rem;
+  color: var(--gold-vein);
+  line-height: 1;
+  opacity: 0.5;
+}
+
+.comentario .autor {
+  font-weight: 700;
+  color: var(--black-steel);
+  text-align: right;
+  font-size: 1rem;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.comentario .autor::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background: var(--gold-vein);
+}
+
+/* ====== EFECTO DE MAQUINARIA ====== */
+@keyframes maquinariaComentarios {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.comentario:hover {
+  animation: maquinariaComentarios 0.8s ease;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .comentarios-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  #form-comentario {
+    order: 2;
+  }
+  
+  .comentarios-grid {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion-comentarios {
+    padding: 1.5rem;
+  }
+  
+  .seccion-comentarios h1 {
+    font-size: 2.2rem;
+  }
+  
+  .comentario {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-comentarios h1 {
+    font-size: 1.8rem;
+  }
+  
+  .comentario .texto {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .comentario .texto::before {
+    font-size: 2rem;
+  }
+}
